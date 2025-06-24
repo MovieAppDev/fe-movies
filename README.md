@@ -25,7 +25,6 @@ Este es el proyecto frontend de una aplicación para búsqueda y gestión de pel
 
 1. Clonar el repositorio
 
-```bash
 git clone https://github.com/usuario/fe-movies.git
 cd fe-movies
 
