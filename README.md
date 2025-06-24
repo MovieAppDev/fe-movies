@@ -1,102 +1,96 @@
-# fe-movies
+# Frontend 
 
-Este es el proyecto frontend de una aplicación para búsqueda y gestión de películas, desarrollada en React con Vite. Consume datos desde la API pública de OMDb y permite al usuario buscar películas, ver detalles y marcarlas como favoritas. La persistencia de datos está gestionada mediante un backend en ASP.NET Core.
+Este es el frontend del proyecto técnico fullstack desarrollado con React + Vite para Tecnimática. El sistema permite buscar películas mediante la API de OMDb, agregar favoritas y gestionar sesiones de usuario (login). Utiliza un diseño limpio, modular y profesional.
 
-## Tecnologías utilizadas
+---
 
-- React 18
+## 🧱 Stack Tecnológico
+
+- React
 - Vite
 - TypeScript
-- Tailwind CSS
+- TailwindCSS
 - React Router DOM
-- Axios
 - @mui/x-data-grid
 - @mui/icons-material
-- i18next para internacionalización
 
-## Requisitos previos
+---
 
-- Node.js v18 o superior
-- npm o yarn
-- Clave de API válida de OMDb
-- Backend en funcionamiento para la gestión de usuarios y favoritos
+## 📁 Estructura del Proyecto
 
-## Instalación
+```
+src/
+├── assets/               # Archivos estáticos
+├── base-components/      # Componentes base como Input, Modal, Button, etc.
+├── components/           # Componentes específicos
+├── layouts/              # Layout principal y contenedores
+├── pages/                # Páginas principales (Home, Login, etc.)
+├── router/               # Configuración de rutas
+├── translations/         # Archivos de i18n (internacionalización)
+├── types/                # Tipos globales
+├── utils/                # Funciones utilitarias
+└── main.tsx              # Punto de entrada
+```
 
-1. Clonar el repositorio
+---
 
-git clone https://github.com/usuario/fe-movies.git
-cd fe-movies
+## ⚙️ Requisitos previos
 
-    Instalar dependencias
+- Node.js >= 18.x
+- npm >= 9.x o yarn >= 1.22
+- Tener configurada la API del backend (ASP.NET Core) y el API KEY de OMDb
 
+---
+
+## 🚀 Instalación y ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo-frontend.git
+cd nombre-del-proyecto-frontend
+```
+
+2. Instalar dependencias:
+
+```bash
 npm install
+```
 
-    Configurar las variables de entorno
+3. Crear el archivo `.env` en la raíz del proyecto con las siguientes variables:
 
-Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
-
+```
 VITE_API_URL=http://localhost:5000/api
 VITE_OMDB_API_KEY=tu_clave_de_api_omdb
+```
 
-Reemplazar tu_clave_de_api_omdb con tu clave personal de OMDb.
+4. Iniciar el servidor de desarrollo:
 
-    Ejecutar la aplicación
-
+```bash
 npm run dev
+```
 
-El proyecto estará disponible en http://localhost:5173.
-Estructura del proyecto
+---
 
-src/
-├── base-components/        # Componentes reutilizables: botones, inputs, modales
-├── components/             # Componentes principales (Home, Search, Favorites)
-│   └── Home/
-│       └── HomeComponent.tsx
-├── layouts/                # Layout general con sidebar y contenido principal
-├── router/                 # Configuración de rutas
-├── services/               # Funciones de consumo de API (OMDb y backend)
-├── translations/           # Archivos de traducción por idioma
-├── types/                  # Tipos de datos en TypeScript
-├── utils/                  # Funciones auxiliares reutilizables
-├── App.tsx                 # Componente raíz
-└── main.tsx                # Punto de entrada de la aplicación
+## 🌐 Funcionalidades implementadas
 
-Funcionalidades
+- 🔍 Búsqueda de películas por título usando la API de OMDb.
+- ⭐ Añadir o eliminar películas de la lista de favoritas.
+- 🔐 Login de usuario con validación desde backend.
+- 🧭 Navegación entre vistas con rutas protegidas.
+- 📁 Organización modular y componentes reutilizables.
+- 🌍 Traducciones con sistema de i18n.
+- 📊 Uso de @mui/x-data-grid para presentación de favoritos.
 
-    Búsqueda de películas por título usando OMDb
+---
 
-    Visualización de carátulas, título y año de cada película
+## 📦 Comandos útiles
 
-    Marcado de películas como favoritas por usuario autenticado
+| Comando           | Descripción                      |
+|-------------------|----------------------------------|
+| `npm run dev`     | Ejecuta el proyecto en modo dev  |
+| `npm run build`   | Genera la build de producción    |
+| `npm run preview` | Previsualiza la build            |
 
-    Visualización de lista de películas favoritas
+---
 
-    Interfaz responsive adaptable a dispositivos móviles
-
-    Estructura modular con separación de responsabilidades
-
-    Sistema de internacionalización (i18n)
-
-Buenas prácticas aplicadas
-
-    Principios SOLID en la estructuración del código
-
-    Separación entre lógica de presentación, servicios y tipos
-
-    Uso de componentes reutilizables y desacoplados
-
-    Arquitectura limpia orientada a mantenimiento y escalabilidad
-
-    Uso adecuado de hooks de React y tipado estricto con TypeScript
-
-Instalación y configuración del backend
-
-Consultar el repositorio correspondiente al backend para configurar correctamente el entorno de persistencia, autenticación y gestión de favoritos: be-movies.
-Notas adicionales
-
-    Las peticiones a la API OMDb se realizan vía parámetro s= para búsquedas generales, y t= o i= para obtener detalles.
-
-    El login ya se encuentra implementado pero puede requerir configuración adicional si se desea usar autenticación persistente.
-
-    El proyecto puede ser desplegado fácilmente en servicios como Vercel, Netlify o servidor personalizado.
