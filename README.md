@@ -79,7 +79,6 @@ npm run dev
 - 🔐 Login de usuario con validación desde backend.
 - 🧭 Navegación entre vistas con rutas protegidas.
 - 📁 Organización modular y componentes reutilizables.
-- 🌍 Traducciones con sistema de i18n.
 - 📊 Uso de @mui/x-data-grid para presentación de favoritos.
 
 ---
